@@ -1,7 +1,14 @@
 package com.contiq.pages;
 
 public enum EProjectType {
-	BLOG_POST("Blog Post"), PRESENTATIONS("Prentation"), SELECT_PROJECT_TYPE("Select Project Type");
+	BLOG_POST("Blog Post"), PRESENTATIONS("Presentations"), SELECT_PROJECT_TYPE("Select Project Type");
 
-	EProjectType(String s){}
+	String e;
+	EProjectType(String s){
+		e = s;
+	}
+	public String toString()
+	{
+		return e;
+	}
 }

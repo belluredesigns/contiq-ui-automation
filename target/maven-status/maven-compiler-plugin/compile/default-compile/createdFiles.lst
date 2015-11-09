@@ -1,7 +1,0 @@
-com\contiq\pages\login\HomePage.class
-com\comtiq\util\EBrowser.class
-com\comtiq\util\TestProperties.class
-com\contiq\pages\login\LoginPage.class
-com\comtiq\util\WebDriverUtil$1.class
-com\comtiq\util\WebDriverUtil.class
-com\contiq\pages\DefaultPage.class

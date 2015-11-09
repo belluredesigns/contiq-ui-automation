@@ -13,7 +13,6 @@ public class LoginPage extends DefaultPage{
 			throw new IllegalArgumentException("This is not a login page");
 			
 		}
-//		this.driver = driver;
 	}
 	
 	@FindBy(id = "username")
@@ -29,8 +28,8 @@ public class LoginPage extends DefaultPage{
 		emailField.sendKeys(email);
 		passwordField.sendKeys(password);
 		loginButton.click();
-		return PageFactory.initElements(driver, HomePage.class);
-		
+		HomePage hp = PageFactory.initElements(driver, HomePage.class);
+		return hp;
 	}
 	
 	

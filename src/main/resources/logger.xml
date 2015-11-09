@@ -1,0 +1,28 @@
+
+<configuration debug="false" scan="true" scanPeriod="30 seconds">
+		
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd~HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n </Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="CORE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>log/test.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>log/test.%d.log</FileNamePattern>
+			<MaxHistory>10</MaxHistory>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{yyyy-MM-dd~HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n </Pattern>
+		</encoder>
+	</appender>	
+	
+
+	<logger name="com.contiq" level="INFO">
+		<appender-ref ref="CORE" />
+	</logger>
+
+</configuration>
+

@@ -7,9 +7,16 @@ import org.openqa.selenium.support.ui.Select;
 
 public class NewProjectPage extends DefaultPage {
 
-	public NewProjectPage(WebDriver driver){
+	final static String CREATE_PROJECT_BUTTON = "input[class='btn btn-primary']";
+	public NewProjectPage(WebDriver driver) {
 		super(driver);
-		
+		waitForcss(CREATE_PROJECT_BUTTON);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@FindBy(css = ".modal-title")
@@ -30,7 +37,7 @@ public class NewProjectPage extends DefaultPage {
 	@FindBy(css="[class='btn btn-default']")
 	public WebElement closeButton;
 	
-	@FindBy(css="input[class='btn btn-primary']")
+	@FindBy(css=CREATE_PROJECT_BUTTON)
 	public WebElement createProject;
 	
 	
@@ -45,6 +52,10 @@ public class NewProjectPage extends DefaultPage {
 		this.projectName.sendKeys(projectName);
 		this.projectDescription.sendKeys(projectDescription);
 		createProject.click();
+	}
+	
+	public String getTitle() {
+		return driver.getTitle();			
 	}
 	
 }

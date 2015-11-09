@@ -28,6 +28,27 @@ public class DefaultPage {
 		});
 
 	}
+	public void waitForcss(final String e)
+	{
+		wait.until(new ExpectedCondition() {
+			@Override
+			public Object apply(Object arg0) {
+				return driver.findElement(By.cssSelector(e));
+			}
+		});
+
+	}
+	public void waitForxPath(final String e)
+	{
+		wait.until(new ExpectedCondition() {
+			@Override
+			public Object apply(Object arg0) {
+				return driver.findElement(By.xpath(e));
+			}
+		});
+
+	}
+	
 	
 	
 	public WebElement findWebElement(String str){
