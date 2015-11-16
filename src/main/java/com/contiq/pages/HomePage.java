@@ -28,6 +28,7 @@ public class HomePage extends DefaultPage{
 	
 	
 	public WebElement getProject(String name, String des){
+		waitUtil.checkPageIsReady();
 		PageFactory.initElements(driver, this);
 		String elementText = name + "\n" + des;
 		for (WebElement e : projectList){

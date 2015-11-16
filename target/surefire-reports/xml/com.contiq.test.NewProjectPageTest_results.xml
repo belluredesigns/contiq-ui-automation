@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test ac31d120-3f15-4b38-b757-cd30d4806b48"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="23.047">
+  <properties />
+  
+  
+            <testcase name="createNewPresentationProject" time="10.437" classname="com.contiq.test.NewProjectPageTest" />
+                <testcase name="createNewBlogProject" time="12.610" classname="com.contiq.test.NewProjectPageTest" />
+      
+</testsuite>

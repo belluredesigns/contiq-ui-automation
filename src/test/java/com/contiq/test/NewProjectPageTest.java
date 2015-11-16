@@ -24,15 +24,14 @@ public class NewProjectPageTest extends AbstractTest {
 		Assert.assertNotNull(pName);
 	}
 
-	//@Test
+	@Test
 	public void createNewBlogProject(){
 		String blogProjectName = "BlogTest1";
 		String blogProjectDes = "BlogTest1des";
 		
 		HomePage homePage = logIn(prop.getEmailAddress(), prop.getPassword());
 		NewProjectPage nBP = homePage.clickBlogPostPlusSign();
-		nBP.createProject(EProjectType.BLOG_POST, blogProjectName, blogProjectDes); 
-		
+		nBP.createProject(EProjectType.BLOG_POST, blogProjectName, blogProjectDes); 		
 		WebElement pName = homePage.getProject(blogProjectName, blogProjectDes);
 		Assert.assertNotNull(pName);
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test dba87026-5068-4dae-80a6-ee80ed094c21"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.573">
+  <properties />
+  
+  
+            <testcase name="logIn" time="2.573" classname="com.contiq.test.LogInPageTest" />
+      
+</testsuite>

@@ -36,10 +36,10 @@ public class WebDriverWaitUtil {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		// Initially bellow given if condition will check ready state of page.
-		if (js.executeScript("return document.readyState").toString().equals("complete")) {
-			System.out.println("Page Is loaded.");
-			return;
-		}
+//		if (js.executeScript("return document.readyState").toString().equals("complete")) {
+//			System.out.println("Page Is loaded.");
+//			return;
+//		}
 
 		// This loop will rotate for 25 times to check If page Is ready after
 		// every 1 second.

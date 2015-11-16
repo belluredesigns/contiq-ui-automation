@@ -8,14 +8,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.comtiq.util.WebDriverWaitUtil;
+
 public class DefaultPage {
 	
 	protected final WebDriver driver;
 	protected WebDriverWait wait ;
+	protected WebDriverWaitUtil waitUtil;
 
 	public DefaultPage(WebDriver driver){
 		this.driver = driver;
 		wait = new WebDriverWait(driver, 30);
+		waitUtil = new WebDriverWaitUtil(driver);
 		
 	}
 	public void waitForWebElement(final By by)

@@ -13,5 +13,10 @@ public class LogInPageTest extends AbstractTest {
 		HomePage homePage = logIn(prop.getEmailAddress(), prop.getPassword());
 		Assert.assertEquals(homePage.getTitle(), "Contiq");
 	}
-	
+
+	public static void main(String[] args)
+	{
+		LogInPageTest p = new LogInPageTest();
+		p.log.info("test");
+	}
 }

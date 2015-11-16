@@ -1,4 +1,4 @@
-package com.contiq.test;
+package temp;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
