@@ -21,7 +21,7 @@ public class NewProjectPageTest extends AbstractTest {
 		nPP.createProject(EProjectType.PRESENTATIONS, projectName, projectDescription);
 		WebElement pName = homePage.getProject(projectName, projectDescription);
 		
-		Assert.assertNotNull(pName);
+		Assert.assertNull(pName);
 	}
 
 	@Test
