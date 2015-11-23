@@ -26,18 +26,18 @@ public class WebDriverUtil {
 	public static WebDriver getDriver(EBrowser browser) 
 	{
 		WebDriver driver = null;
-		//DesiredCapabilities capabilities = new DesiredCapabilities();
+//		DesiredCapabilities capabilities = new DesiredCapabilities();
 		switch (browser)
 		{
 		case FIREFOX:
-		/*	try {
-				driver = new RemoteWebDriver(
-						new URL("http://localhost:4444/wd/hub"), 
-						DesiredCapabilities.firefox());
-			} catch (MalformedURLException e) {
-				return null;
-			}
-			capabilities.setBrowserName("firefox");*/
+//			try {
+//				driver = new RemoteWebDriver(
+//						new URL("http://localhost:4444/wd/hub"), 
+//						DesiredCapabilities.firefox());
+//			} catch (MalformedURLException e) {
+//				return null;
+//			}
+//			capabilities.setBrowserName("firefox");
 			driver = new FirefoxDriver();
 			break;
 		case IE:

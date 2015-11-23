@@ -13,6 +13,11 @@ public class HomePage extends DefaultPage{
 	final static int BLOGPOST_PLUS_SIGN_INDEX = 1;
 	final String PLUS_SIGN = "div[class='ho_main'] [class='fa fa-plus-square']";
 
+	
+	//TODO
+	final String XPATH_PROJECT_TO_PROJECT_NAME = "";
+	final String XPATH_PROJECT_TO_PROJECT_CLOSE_BTN = "";
+	
 	public HomePage(WebDriver driver) {
 		super(driver);
 		waitForWebElement(By.cssSelector(PLUS_SIGN));
@@ -26,6 +31,9 @@ public class HomePage extends DefaultPage{
 	@FindBy(css = "a[class ='single_project pro_switch']")
 	private List<WebElement> projectList;
 	
+	@FindBy(css="div[class ='project']")
+	private List <WebElement> allProjects;
+	
 	
 	public WebElement getProject(String name, String des){
 		waitUtil.checkPageIsReady();
@@ -38,7 +46,32 @@ public class HomePage extends DefaultPage{
 		
 		return null;
 	}
-	
+	public void closeProject(String projectName, String projectDesc) throws Exception
+	{
+		WebElement closeBtn = getCloseButton(projectName, projectDesc);
+		if(closeBtn == null)
+			throw new Exception("Unable to locate close btn for the given project");
+		
+		closeBtn.click();
+	}
+	private WebElement getCloseButton(String projectName, String projectDesc){
+		
+		waitUtil.checkPageIsReady();
+		PageFactory.initElements(driver, this);
+		String elementText = projectName + "\n" + projectDesc;
+		for (WebElement e : allProjects){
+
+			By projectN = By.xpath(XPATH_PROJECT_TO_PROJECT_NAME);
+			By close = By.xpath(XPATH_PROJECT_TO_PROJECT_CLOSE_BTN);
+			WebElement n = e.findElement(projectN);
+			if(n.getText().equals(elementText))
+			{
+				return e.findElement(close);
+			}
+		}
+		
+		return null;
+	}
 	public String getTitle() {
 		return driver.getTitle();			
 	}
