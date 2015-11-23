@@ -10,7 +10,7 @@ import com.contiq.pages.NewProjectPage;
 
 public class NewProjectPageTest extends AbstractTest {
 
-	@Test
+//	@Test
 	public void createNewPresentationProject() {
 		String projectName = "PresentationTest1";
 		String projectDescription = "PresentationTeasDesc1";
@@ -21,7 +21,7 @@ public class NewProjectPageTest extends AbstractTest {
 		Assert.assertNotNull(pName);
 	}
 
-	@Test
+	//@Test
 	public void createNewBlogProject() {
 		String blogProjectName = "BlogTest1";
 		String blogProjectDes = "BlogTest1des";
